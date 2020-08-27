@@ -29,3 +29,4 @@ function alphabetPosition(text) {
     }
     return text.toLowerCase().split('').filter(char=> Object.keys(alphaToPos).includes(char)).map(letter => alphaToPos[letter]).join(' ').trim()
   }
+ 
