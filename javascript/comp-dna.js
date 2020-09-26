@@ -5,6 +5,5 @@ function DNAStrand(dna){
         'T':'A',
         'G':'C'
     }
-
     return dna.split('').map(pair => compDNA[pair]).join('')
   }
