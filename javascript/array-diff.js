@@ -1,6 +1,7 @@
 function arrayDiff(a, b) {
   return a.filter(val => (!b.includes(val)))
 }
+
 function arrayDiff(a, b) {
   let diffArr = []
   a.forEach(val => {
