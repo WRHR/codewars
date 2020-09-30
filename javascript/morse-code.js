@@ -49,5 +49,4 @@ const morseDecoder = {
     '...---...': 'SOS'
 }
 
-
 console.log(decodeMorse('-.-. -.-. -.-.'))
