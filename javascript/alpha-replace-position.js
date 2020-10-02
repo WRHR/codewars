@@ -27,6 +27,14 @@ function alphabetPosition(text) {
         'y':25,
         'z':26
     }
-    return text.toLowerCase().split('').filter(char=> Object.keys(alphaToPos).includes(char)).map(letter => alphaToPos[letter]).join(' ').trim()
+    return text
+        .toLowerCase()
+        .split('')
+        .filter(
+            char => Object
+                .keys(alphaToPos)
+                .includes(char))
+                .map(
+                    letter => alphaToPos[letter]).join(' ').trim()
   }
  

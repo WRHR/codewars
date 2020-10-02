@@ -10,6 +10,7 @@ function sumOfDigits(n){
     .toString()
     .split('')
     .map(num => parseInt(num))
+    
   return splitN.length > 1 
     ? sumOfDigits(splitN.reduce( (acc, val) => acc + val, 0 )) 
     : n
