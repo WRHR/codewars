@@ -6,4 +6,5 @@ function anagrams(word, words) {
       }
   })
 }
+
 console.log(anagrams('aabb', ['aabb', 'abcd', 'bbaa', 'dada']))
