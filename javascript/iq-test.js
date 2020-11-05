@@ -3,6 +3,7 @@ function iqTest(nums){
     evens: [],
     odds: []
   }
+  
   let inputs = nums.split(' ').map((num) => {
     parseInt(num)
     num % 2 ? counts.evens.push(num) : counts.odds.push(num)
