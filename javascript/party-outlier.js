@@ -6,9 +6,16 @@ let arr1 = [2, 4, 0, 100, 4, 11, 2602, 36]
 let arr2 = [160, 3, 1719, 19, 11, 13, -21]
 // Should return: 160 (the only even number)
 
-function partyOutlier (arr){
-  let evens = arr.filter(num => Math.abs(num)%2 === 0)
-  let odds = arr.filter(num => Math.abs(num)%2 === 1)
+// function partyOutlier (arr){
+//   let evens = arr.filter(num => Math.abs(num)%2 === 0)
+//   let odds = arr.filter(num => Math.abs(num)%2 === 1)
+//   return evens.length > odds.length ? odds[0] : evens[0]
+// }
+
+function partyOutlier(arr) {
+  let evens = []
+  let odds = []
+  arr.forEach(num => Math.abs(num)%2 === 0 ? evens.push(num) : odds.push(num))
   return evens.length > odds.length ? odds[0] : evens[0]
 }
 
