@@ -1,7 +1,7 @@
 function iqTest(nums){
   let counts = {
     evens: [],
-    odds: []
+    odds: [],
   }
   
   let inputs = nums.split(' ').map((num) => {
