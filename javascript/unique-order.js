@@ -1,9 +1,10 @@
 var uniqueInOrder=function(iterable){
   let uniques = []
+  let last
   
   for(let i = 0; i< iterable.length; i++){
-    if(iterable[i] != uniques[i-1]){
-      uniques.push(iterable[i])
+    if(iterable[i] !== last){
+      uniques.push(last = iterable[i])
     }
   }
 
