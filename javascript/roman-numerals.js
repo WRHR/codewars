@@ -52,28 +52,52 @@ const numerals = {
   'I': 1,
 }
 
-class RomanNumerals {
-  constructor(num){
-    this.num = num
-  }
-  toRoman() {
-    let numeral = ''
-    let limit = this
-    
-    for(const key in numerals){
-      while(limit >= numerals[key]){
-        numeral += key
-        limit -= numerals[key]
-      }
+var RomanNumerals  = {
+toRoman:function (number) {
+  let numeral = ''
+  let limit = number
+  
+  for(const key in numerals){
+    while(limit >= numerals[key]){
+      numeral += key
+      limit -= numerals[key]
     }
-    
-    return numeral
   }
 
-  fromRoman(){
-    let arr = this.split('')
+  return numeral
+  },
+    
+  fromRoman:function (numeral){
+    let arr = []
+    let i = 0
+    while(i< numeral.length){
+      if(numeral[i] ==='I' && numeral[i+1] === 'V'){
+        arr.push('IV')
+        i +=2
+      }else if(numeral[i] === 'I' && numeral[i+1]==='X'){
+        arr.push('IX')
+        i+=2
+      }else if(numeral[i] === 'X' && numeral[i+1] === 'L'){
+        arr.push('XL')
+        i+=2
+      }else if(numeral[i]=== 'X' && numeral[i+1] === 'C'){
+        arr.push('XC')
+        i+=2
+      }else if(numeral[i] === 'C' && numeral[i+1] === 'D'){
+        arr.push('CD')
+        i+=2
+      }else if(numeral[i] ==='C' && numeral[i+1] === 'M'){
+        arr.push('CM')
+        i+=2
+      }else {
+        arr.push(numeral[i])
+        i++
+      }
+    }
+  
     return arr.reduce((acc,num)=> {return acc += numerals[num]},0)
   }
+
 }
 
 
