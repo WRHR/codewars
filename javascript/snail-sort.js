@@ -8,10 +8,7 @@ function snail(array) {
   while(array.length){
     snailed.push(...array.shift())
     array.forEach(row => snailed.push(row.pop()))
-    snailed.push(...(array.pop() || []).reverse())
-    for(let i = array.length -1; i >=0; i--){
-      snailed.push(array[i].shift())
-    }
+    array.reverse().map(row=> row.reverse())
   }
   return snailed
 }
