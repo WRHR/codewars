@@ -33,7 +33,7 @@ function fromRoman (numeral){
   return arr.reduce((acc,num)=> {return acc += numerals[num]},0)
 }
 
-//console.log(toRoman(2000))
+console.log(toRoman(2000))
 console.log(fromRoman('MMCIII'))
 
 // const numerals = {
