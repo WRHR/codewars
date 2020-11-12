@@ -38,25 +38,19 @@ function tickets(line){
     50: 0,
     25: 0,
   }
-  let ticket = 25
   let status = true
   
   for(let i = 0; i < line.length; i++){
-    till[line[i]] += 1
-    let change = line[i] - ticket
-    while(change > 0 && status){
-      for(money in till){
-        if(money < change && till[money] !==0){
-          change -= money 
-          till[money] -= 1
-        } else {
-          status = false
-        }
-      }
+    till[line[i]]++
+    if(line[i]== 50) till[25] -= 1 
+    if(line[i] == 100) {
+      till[25] -= 1 
+      till[50] > 0 ? till[50] -=1 : till[25] -= 2
     }
+    if(till[50]< 0 || till[25]< 0) status = false
   }
   return status ? 'YES' : 'NO'
 }
 
 
-console.log(tickets([25,25,50,100,25,50,25,100,25,25,50,100,25,25,50,100 ]))
+console.log(tickets([25,25,50,100,25,50,25,100,25,25,50,100,25,25,50,100 ])) // yes
