@@ -12,6 +12,7 @@ function snail(array) {
   }
   return snailed
 }
+
 // function snail(array) {
 //   let snailed = []
 //   while(array.length){
