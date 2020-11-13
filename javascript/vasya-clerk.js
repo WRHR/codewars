@@ -48,7 +48,7 @@ function tickets(line){
       till[25] -= 1 
       till[50] > 0 ? till[50] -=1 : till[25] -= 2
     }
-    if(till[50]< 0 || till[25]< 0) status = false
+    if(till[50]< 0 || till[25]< 0) return status = false
   }
   return status ? 'YES' : 'NO'
 }
