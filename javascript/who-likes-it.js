@@ -8,3 +8,5 @@ function likes(names) {
     }
     return likeFormat[Math.min(4, names.length)]
 }
+
+console.log(likes(['Gary', 'Larry', 'Moe', 'Carry', 'Marry']))
