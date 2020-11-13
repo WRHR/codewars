@@ -32,6 +32,7 @@
 //   }
 //   return status ? 'YES' : 'NO'
 // }
+
 function tickets(line){
   let till = {
     100: 0,
@@ -51,6 +52,5 @@ function tickets(line){
   }
   return status ? 'YES' : 'NO'
 }
-
 
 console.log(tickets([25,25,50,100,25,50,25,100,25,25,50,100,25,25,50,100 ])) // yes

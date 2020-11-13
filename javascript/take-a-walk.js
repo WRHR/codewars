@@ -5,8 +5,12 @@ function isValidWalk(walk) {
       return false
     }
 
-    let walkNS = walk.filter(point => point === 'n' || point === 's').map(pos=> directions[pos])
-    let walkEW = walk.filter(point => point === 'e' || point === 'w').map(pos => directions[pos])
+    let walkNS = walk
+      .filter(point => point === 'n' || point === 's')
+      .map(pos=> directions[pos])
+    let walkEW = walk
+      .filter(point => point === 'e' || point === 'w')
+      .map(pos => directions[pos])
     let walkPosNS = walkNS.reduce((acc, val)=> acc + val, 0)
     let walkPosEW = walkEW.reduce((acc, val)=> acc + val, 0)
 
