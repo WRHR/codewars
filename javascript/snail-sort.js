@@ -13,19 +13,19 @@ function snail(array) {
   return snailed
 }
 
-// function snail(array) {
-//   let snailed = []
-//   while(array.length){
-//     snailed.push(...array.shift())
-//     for(let i = 0; i < array.length; i++){
-//       snailed.push(array[i].pop())
-//     }
-//     snailed.push(...(array.pop() || []).reverse())
-//     for(let i = array.length -1; i >=0; i--){
-//       snailed.push(array[i].shift())
-//     }
-//   }
-//   return snailed
-// }
+function snail(array) {
+  let snailed = []
+  while(array.length){
+    snailed.push(...array.shift())
+    for(let i = 0; i < array.length; i++){
+      snailed.push(array[i].pop())
+    }
+    snailed.push(...(array.pop() || []).reverse())
+    for(let i = array.length -1; i >=0; i--){
+      snailed.push(array[i].shift())
+    }
+  }
+  return snailed
+}
 
 console.log(snail(array))
