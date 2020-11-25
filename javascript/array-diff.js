@@ -1,5 +1,5 @@
 function arrayDiff(a, b) {
-  return a.filter(val => val !== b[0])
+  return a.filter((val) => val !== b[0]);
 }
 
 // function arrayDiff(a, b) {
@@ -12,4 +12,4 @@ function arrayDiff(a, b) {
 //   return diffArr
 // }
 
-console.log(arrayDiff([-17,16,15,0,19,15,-17,15,-8,-17,-19],[-17]))
+console.log(arrayDiff([-17, 16, 15, 0, 19, 15, -17, 15, -8, -17, -19], [-17]));

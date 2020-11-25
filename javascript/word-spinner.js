@@ -2,12 +2,14 @@
 
 //Examples: spinWords( "Hey fellow warriors" ) => returns "Hey wollef sroirraw" spinWords( "This is a test") => returns "This is a test" spinWords( "This is another test" )=> returns "This is rehtona test"
 
-function spinWords(string){
-    let words = string.split(' ')
-    return words.map(word => word.length >= 5 ? reverseWord(word): word ).join(' ')
+function spinWords(string) {
+  let words = string.split(" ");
+  return words
+    .map((word) => (word.length >= 5 ? reverseWord(word) : word))
+    .join(" ");
 }
 
-function reverseWord(word){
-    let letters = word.split('')
-    return letters.reverse().join('')
+function reverseWord(word) {
+  let letters = word.split("");
+  return letters.reverse().join("");
 }

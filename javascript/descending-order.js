@@ -4,7 +4,7 @@
 // Input: 145263 Output: 654321
 // Input: 123456789 Output: 987654321
 
-function descendingOrder(num){
-    let digits = num.toString().map(num=> parseInt(num))
-    return parseInt(digits.sort((a,b) => a - b).join(''))
+function descendingOrder(num) {
+  let digits = num.toString().map((num) => parseInt(num));
+  return parseInt(digits.sort((a, b) => a - b).join(""));
 }

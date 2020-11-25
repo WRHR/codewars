@@ -5,14 +5,13 @@
 // 132189  -->  1 + 3 + 2 + 1 + 8 + 9 = 24  -->  2 + 4 = 6
 // 493193  -->  4 + 9 + 3 + 1 + 9 + 3 = 29  -->  2 + 9 = 11  -->  1 + 1 = 2
 
-function sumOfDigits(n){
+function sumOfDigits(n) {
   let splitN = n
     .toString()
-    .split('')
-    .map(num => parseInt(num))
-    
-  return splitN.length > 1 
-    ? sumOfDigits(splitN.reduce( (acc, val) => acc + val, 0 )) 
-    : n
-}
+    .split("")
+    .map((num) => parseInt(num));
 
+  return splitN.length > 1
+    ? sumOfDigits(splitN.reduce((acc, val) => acc + val, 0))
+    : n;
+}

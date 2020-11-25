@@ -1,40 +1,42 @@
 const numerals = {
-  'M': 1000,
-  'CM': 900,
-  'D': 500,
-  'CD': 400,
-  'C': 100,
-  'XC': 90,
-  'L': 50,
-  'XL': 40,
-  'X': 10,
-  'IX': 9,
-  'V': 5,
-  'IV': 4,
-  'I': 1,
-}
+  M: 1000,
+  CM: 900,
+  D: 500,
+  CD: 400,
+  C: 100,
+  XC: 90,
+  L: 50,
+  XL: 40,
+  X: 10,
+  IX: 9,
+  V: 5,
+  IV: 4,
+  I: 1,
+};
 
 function toRoman(number) {
-  let numeral = ''
-  let limit = number
-  
-  for(const key in numerals){
-    while(limit >= numerals[key]){
-      numeral += key
-      limit -= numerals[key]
+  let numeral = "";
+  let limit = number;
+
+  for (const key in numerals) {
+    while (limit >= numerals[key]) {
+      numeral += key;
+      limit -= numerals[key];
     }
   }
 
-  return numeral
+  return numeral;
 }
 
-function fromRoman (numeral){
-  let arr = numeral.split('')
-  return arr.reduce((acc,num)=> {return acc += numerals[num]},0)
+function fromRoman(numeral) {
+  let arr = numeral.split("");
+  return arr.reduce((acc, num) => {
+    return (acc += numerals[num]);
+  }, 0);
 }
 
-console.log(toRoman(2000))
-console.log(fromRoman('MMCIII'))
+console.log(toRoman(2000));
+console.log(fromRoman("MMCIII"));
 
 // const numerals = {
 //   'M': 1000,
@@ -56,7 +58,7 @@ console.log(fromRoman('MMCIII'))
 // toRoman:function (number) {
 //   let numeral = ''
 //   let limit = number
-  
+
 //   for(const key in numerals){
 //     while(limit >= numerals[key]){
 //       numeral += key
@@ -66,7 +68,7 @@ console.log(fromRoman('MMCIII'))
 
 //   return numeral
 //   },
-    
+
 //   fromRoman:function (numeral){
 //     let arr = []
 //     let i = 0
@@ -94,7 +96,7 @@ console.log(fromRoman('MMCIII'))
 //         i++
 //       }
 //     }
-  
+
 //     return arr.reduce((acc,num)=> {return acc += numerals[num]},0)
 //   }
 

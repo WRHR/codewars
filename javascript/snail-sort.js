@@ -1,16 +1,18 @@
-array = [[1,2,3,4],
-         [5,6,7,8],
-         [9,10,11,12],
-         [13,14,15,16]]
+array = [
+  [1, 2, 3, 4],
+  [5, 6, 7, 8],
+  [9, 10, 11, 12],
+  [13, 14, 15, 16],
+];
 
 function snail(array) {
-  let snailed = []
-  while(array.length){
-    snailed.push(...array.shift())
-    array.forEach(row => snailed.push(row.pop()))
-    array.reverse().map(row=> row.reverse())
+  let snailed = [];
+  while (array.length) {
+    snailed.push(...array.shift());
+    array.forEach((row) => snailed.push(row.pop()));
+    array.reverse().map((row) => row.reverse());
   }
-  return snailed
+  return snailed;
 }
 
 // function snail(array) {
@@ -28,4 +30,4 @@ function snail(array) {
 //   return snailed
 // }
 
-console.log(snail(array))
+console.log(snail(array));

@@ -2,12 +2,12 @@
 
 // Example: The binary representation of 1234 is 10011010010, so the function should return 5 in this case
 
-function bitCounter(n){
-    return eval(n.toString(2).split('').join('+'))
+function bitCounter(n) {
+  return eval(n.toString(2).split("").join("+"));
 }
 
-console.log(bitCounter(0))
-console.log(bitCounter(4))
-console.log(bitCounter(7))
-console.log(bitCounter(9))
-console.log(bitCounter(10))
+console.log(bitCounter(0));
+console.log(bitCounter(4));
+console.log(bitCounter(7));
+console.log(bitCounter(9));
+console.log(bitCounter(10));

@@ -4,16 +4,20 @@
 
 // If the input string is empty, return an empty string. The words in the input String will only contain valid consecutive numbers.
 
-function order(words){
-    let unorderedWords = words.split(' ')
-    return unorderedWords.sort((a,b) => {return findWordOrder(a) - findWordOrder(b)}).join(' ')
-  }
+function order(words) {
+  let unorderedWords = words.split(" ");
+  return unorderedWords
+    .sort((a, b) => {
+      return findWordOrder(a) - findWordOrder(b);
+    })
+    .join(" ");
+}
 
-  function findWordOrder(word){
-      let letters = word.split('')
-      let position = parseInt(letters.filter(letter => parseInt(letter) > 0)[0])
-      console.log(position)
-      return position
-  }
+function findWordOrder(word) {
+  let letters = word.split("");
+  let position = parseInt(letters.filter((letter) => parseInt(letter) > 0)[0]);
+  console.log(position);
+  return position;
+}
 
-  console.log(order("is2 Thi1s T4est 3a"))
+console.log(order("is2 Thi1s T4est 3a"));

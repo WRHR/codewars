@@ -20,37 +20,39 @@
 
 //     if(line[i] == 100){
 //       if(till[50] > 0 && till[25] > 0) {
-//           till[50] -=1 
-//           till [25] -=1 
+//           till[50] -=1
+//           till [25] -=1
 //       }else if(till[25] >= 3){
 //         till[25] -= 3
 //       } else {
 //           status = false
 //       }
 //     }
-    
+
 //   }
 //   return status ? 'YES' : 'NO'
 // }
 
-function tickets(line){
+function tickets(line) {
   let till = {
     100: 0,
     50: 0,
     25: 0,
-  }
-  let status = true
-  
-  for(let i = 0; i < line.length; i++){
-    till[line[i]]++
-    if(line[i]== 50) till[25] -= 1 
-    if(line[i] == 100) {
-      till[25] -= 1 
-      till[50] > 0 ? till[50] -=1 : till[25] -= 2
+  };
+  let status = true;
+
+  for (let i = 0; i < line.length; i++) {
+    till[line[i]]++;
+    if (line[i] == 50) till[25] -= 1;
+    if (line[i] == 100) {
+      till[25] -= 1;
+      till[50] > 0 ? (till[50] -= 1) : (till[25] -= 2);
     }
-    if(till[50]< 0 || till[25]< 0) return status = false
+    if (till[50] < 0 || till[25] < 0) return (status = false);
   }
-  return status ? 'YES' : 'NO'
+  return status ? "YES" : "NO";
 }
 
-console.log(tickets([25,25,50,100,25,50,25,100,25,25,50,100,25,25,50,100 ])) // yes
+console.log(
+  tickets([25, 25, 50, 100, 25, 50, 25, 100, 25, 25, 50, 100, 25, 25, 50, 100])
+); // yes

@@ -17,14 +17,14 @@
 //   return reversed.join('')
 // }
 
-function reverse(str){
-  let string = (typeof str !== 'string') ? str.toString() : str
-  return string.split('').reverse().join('')
+function reverse(str) {
+  let string = typeof str !== "string" ? str.toString() : str;
+  return string.split("").reverse().join("");
 }
 
-String.prototype.reverse = function(){
-  return reverse(this)
-}
+String.prototype.reverse = function () {
+  return reverse(this);
+};
 
-console.log(reverse('abc'))
-console.log('abc'.reverse())
+console.log(reverse("abc"));
+console.log("abc".reverse());
